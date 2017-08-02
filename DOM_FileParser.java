@@ -90,16 +90,18 @@ public class DOM_FileParser {
         return tagSet;
     }
     
-    /* return the attributes stored in the element with tag 'tag' */
+    /*
+    /* return the attributes stored in the element with tag 'tag' 
     public String getAttributes(String tag) {
-        NodeList nList = getElementsByTagName(tag);
+        NodeList nList = tag.getElementsByTagName();
         for (Node node : nList) {
-            System.out.printl
+            System.out.println( ((Element)node).toString() );
             //for ( int i=0; i < nList.length(); i++ ) {
                 //( (Element)node).getEleme   
             //}
         }
     }
+    */
     
     /* return true if there is currently a File associated with the parser */
     public boolean fileIsSet() {

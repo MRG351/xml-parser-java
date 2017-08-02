@@ -210,7 +210,6 @@ public class RetinaParser extends JPanel implements ActionListener {
         displayPanel.add(checkBoxPanel);  
         displayPanel.add(optionsPanel);
         
-        updateUI();     /* refresh the gui */
     }
     
      
@@ -224,6 +223,7 @@ public class RetinaParser extends JPanel implements ActionListener {
         frame.setContentPane(newContentPane);
 
         frame.pack();
+        frame.setLocationByPlatform(true);
         frame.setVisible(true);
     }
     
@@ -288,11 +288,13 @@ public class RetinaParser extends JPanel implements ActionListener {
             for (JCheckBox tagBox : tagBoxes) {
                 if (tagBox.isSelected()) {
                         System.out.println(tagBox.getText());
-                        System.out.println(parser.getAttributes(tagBox.getText()));
+                        //System.out.println(parser.getAttributes(tagBox.getText()));
                 }
             }
             
         }
+        
+        updateUI();     /* refresh the gui */
     }  
     
 
